@@ -6,7 +6,7 @@
 /*   By: afuchs <afuchs@student.42mulhouse.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 20:25:35 by afuchs            #+#    #+#             */
-/*   Updated: 2022/05/08 16:33:34 by afuchs           ###   ########.fr       */
+/*   Updated: 2022/07/21 19:18:07 by alfux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -94,7 +94,7 @@ int	animate(t_dat *win)
 		game_over(win);
 	mpitw(win, win->scr.iid, 0, 0);
 	show_moves(win);
-	mlx_sync(2, win->wid);
+//	mlx_sync(2, win->wid);
 	return (0);
 }
 

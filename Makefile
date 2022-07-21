@@ -6,7 +6,7 @@
 #    By: afuchs <afuchs@student.42mulhouse.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/05 14:43:45 by afuchs            #+#    #+#              #
-#    Updated: 2022/05/08 16:05:55 by afuchs           ###   ########.fr        #
+#    Updated: 2022/07/21 19:46:10 by alfux            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 SRCS	=	main.c					\
@@ -101,10 +101,14 @@ MATH	= -lm
 
 NAME	= so_long
 
+MLX     = -Isrcs
+
+LMLX     = srcs/libmlx.a -framework OpenGL -framework AppKit
+
 all				:	$(NAME)
 
 $(NAME)			:	$(OPATH) $(OBJ)
-					@gcc $(OPT) $(MATH) $(OBJ) -lmlx -o $(NAME)
+					@gcc $(OPT) $(MATH) $(OBJ) $(LMLX) -o $(NAME)
 					@echo "\033[32mCompilation complete.\033[0m"
 
 $(OPATH)%.o		:	$(SPATH)%.c $(SPATH)$(SHEADER)
